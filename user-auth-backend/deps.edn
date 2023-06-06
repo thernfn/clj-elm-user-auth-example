@@ -1,0 +1,20 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        io.pedestal/pedestal.service {:mvn/version "0.5.10"}
+        io.pedestal/pedestal.immutant {:mvn/version "0.5.10"}
+        buddy/buddy-auth {:mvn/version "3.0.323"
+                          :exclussions [cheshire]}
+        org.slf4j/slf4j-simple {:mvn/version "1.7.36"}
+        metosin/muuntaja {:mvn/version "0.6.8"}
+        metosin/malli {:mvn/version "0.11.0"}
+        metosin/ring-http-response {:mvn/version "0.9.3"}
+        party.donut/system {:git/url "https://github.com/donut-party/system.git"
+                            :git/sha "d09e3a665bce812a11157daf82f29a879a1ba504"}}
+ :aliases
+ {:dev/repl 
+  {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}
+                cider/cider-nrepl {:mvn/version "0.30.0"}}
+   :main-opts ["-m" "nrepl.cmdline"
+               "--middleware" "[cider.nrepl/cider-middleware]"
+               "--interactive"]}}}
+
